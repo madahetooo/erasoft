@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/NavigationBarExample.dart';
+import 'GridViewExample.dart';
+import 'basic_widgets.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -8,29 +11,116 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Page Screen'),
-        actions: const [Icon(Icons.calendar_month)],
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(20.0),
-              child: GestureDetector(
-                onTap: () {},
-                child: Text(
-                  "Hello from Homedasdsa Page",
-                  style: TextStyle(
-                      color: Colors.red,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => GridViewExample()));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    padding: EdgeInsets.all(30),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 4),
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: const [
+                          BoxShadow(color: Colors.green, offset: Offset(6.0, 6.0))
+                        ]),
+                    child: Text(
+                      "Basic Widget Tutorials",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0,
+                          color: Colors.black),
+                    ),
+                  ),
                 ),
-              ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  padding: EdgeInsets.all(30),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 4),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: const [
+                        BoxShadow(color: Colors.green, offset: Offset(6.0, 6.0))
+                      ]),
+                  child: Text(
+                    "BMI Calculator",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  padding: EdgeInsets.all(30),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 4),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: const [
+                        BoxShadow(color: Colors.green, offset: Offset(6.0, 6.0))
+                      ]),
+                  child: Text(
+                    "TodoList Application",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  padding: EdgeInsets.all(30),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 4),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: const [
+                        BoxShadow(color: Colors.green, offset: Offset(6.0, 6.0))
+                      ]),
+                  child: Text(
+                    "WorldTimer Application",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  padding: EdgeInsets.all(30),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 4),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: const [
+                        BoxShadow(color: Colors.green, offset: Offset(6.0, 6.0))
+                      ]),
+                  child: Text(
+                    "Chat Application",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                ),
+              ],
             ),
-            Container(
-              color: Colors.green,
-                child: Text("Another Widget")
-            ),
-          ],
+          ),
         ),
       ),
       drawer: Drawer(
@@ -79,10 +169,7 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red,
-        onPressed: () {
-
-          
-        },
+        onPressed: () {},
         child: Icon(Icons.add),
       ),
     );
