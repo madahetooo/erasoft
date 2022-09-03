@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutterproject/LoginScreen.dart';
-import 'package:flutterproject/RegistrationScreen.dart';
+import 'package:flutterproject/authsystem/LoginScreen.dart';
+import 'package:flutterproject/authsystem/RegistrationScreen.dart';
 
 class TabbarExample extends StatefulWidget {
   const TabbarExample({Key? key}) : super(key: key);

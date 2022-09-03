@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterproject/HomePage.dart';
-import 'package:flutterproject/LoginScreen.dart';
+import 'package:flutterproject/basicwidgets/HomePage.dart';
+import 'package:flutterproject/authsystem/LoginScreen.dart';
 import 'package:flutterproject/SplashScreen.dart';
 import 'package:flutterproject/TabbarExample.dart';
 
